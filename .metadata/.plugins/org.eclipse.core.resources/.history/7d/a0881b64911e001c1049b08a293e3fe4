@@ -1,0 +1,16 @@
+package com.test;
+
+public class Id {
+	private String[] idNumber=new String[18];
+
+	public String[] getIdNumber() {
+		return idNumber;
+	}
+
+	public void setIdNumber(String string) {
+		this.idNumber = string;
+	}
+	
+	
+	
+}

@@ -1,0 +1,39 @@
+package com.test;
+import java.util.Scanner;
+import java.util.Calendar;
+import java.lang.*;
+
+
+public class IdTest {
+	static Calendar today=Calendar.getInstance();
+	static Scanner input=new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("请输入身份证");
+		String idNumber=input.next();
+		idNumberTest(idNumber);			
+	}
+	public static void idNumberTest(String idNumber) {
+		switch(idNumber.length()) 
+		{	
+			case 18:
+			String yearString=idNumber.substring(6,10); //substring从一个较大字符串提取一小段字符
+			int year=Integer.decode(yearString);
+			if(year<1900 && year>today.get(Calendar.YEAR)||)
+			{
+				System.out.println("省份证不合法");
+			}
+			else 
+			{
+				System.out.println("你的身份证号码是"+year+"年");
+			}
+			break;
+			default:
+				System.out.println("身份证不合法");
+			break;
+		}
+			
+	}
+	
+}
